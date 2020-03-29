@@ -6,7 +6,7 @@
                     <div class="user-icon"><i class="fa fa-user"> {{ comment.name }}</i></div>
                 </div>
                 <div class="card-body">
-                    <p>{{ comment.message }}</p>
+                    <p><i class="fa fa-comments"></i>  {{ comment.message }}</p>
                 </div>
                 <div class="card-footer" v-if="comment.nested_level < 2">
                     
@@ -43,7 +43,6 @@
                 if (comment.grandchildren != null && comment.grandchildren.length > 0 && comment.nested_level < 2) {
                     return true
                 }
-
                 return false
             },
             showForm(comment) {

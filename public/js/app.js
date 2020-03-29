@@ -25456,7 +25456,10 @@ var render = function() {
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "card-body" }, [
-                _c("p", [_vm._v(_vm._s(comment.message))])
+                _c("p", [
+                  _c("i", { staticClass: "fa fa-comments" }),
+                  _vm._v(" " + _vm._s(comment.message))
+                ])
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "child" }, [
@@ -25567,7 +25570,10 @@ var render = function() {
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "card-body" }, [
-          _c("p", [_vm._v(_vm._s(_vm.comment.message))])
+          _c("p", [
+            _c("i", { staticClass: "fa fa-comments" }),
+            _vm._v("  " + _vm._s(_vm.comment.message))
+          ])
         ]),
         _vm._v(" "),
         _vm.comment.nested_level < 2
@@ -44117,11 +44123,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-var actions = {
-  updateComment: function updateComment(context) {
-    context.commit('updateComment');
-  }
-};
+var actions = {};
 /* harmony default export */ __webpack_exports__["default"] = (actions);
 
 /***/ }),

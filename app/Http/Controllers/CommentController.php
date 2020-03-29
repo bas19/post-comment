@@ -102,7 +102,6 @@ class CommentController extends Controller
         return Comment::where('post_id', $id)   
             ->where('nested_level', 0)
             ->with('grandchildren')
-            ->orderBy('created_at')
             ->get();
     }
 }

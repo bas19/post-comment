@@ -6,7 +6,7 @@
                     <div class="user-icon"><i class="fa fa-user"> {{ comment.name }}</i></div>
                 </div>
                 <div class="card-body">
-                    <p>{{ comment.message }}</p>
+                    <p><i class="fa fa-comments"></i> {{ comment.message }}</p>
                 </div>
                 <div class="child">
                     <ul>

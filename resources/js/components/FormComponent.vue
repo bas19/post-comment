@@ -63,7 +63,7 @@
 
                 // remove malicious data
                 let message = this.$sanitize(this.message)
-                let name = this.$sanitize(this.name)
+                let name    = this.$sanitize(this.name)
 
                 let data = {
                     name: name,
