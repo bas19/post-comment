@@ -28,7 +28,7 @@ class Comment extends FormRequest
             'message' => 'required|max:10000',
             'post_id' => 'required|integer',
             'parent_comment_id' => 'integer|nullable',
-            'nested_level' => 'integer'
+            'nested_level' => 'integer|required'
         ];
     }
 }

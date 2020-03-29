@@ -17,9 +17,9 @@ class CreateCommentsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('message');
-            $table->integer('post_id');
-            $table->integer('parent_comment_id')->nullable();
-            $table->integer('nested_level');
+            $table->integer('post_id')->unsigned();
+            $table->integer('parent_comment_id')->unsigned()->nullable();
+            $table->integer('nested_level')->unsigned();
             $table->timestamps();
         });
     }
