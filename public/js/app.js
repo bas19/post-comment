@@ -25458,7 +25458,14 @@ var render = function() {
               _c("div", { staticClass: "card-body" }, [
                 _c("p", [
                   _c("i", { staticClass: "fa fa-comments" }),
-                  _vm._v(" " + _vm._s(comment.message))
+                  _vm._v(" " + _vm._s(comment.message) + " "),
+                  _c("span", { staticClass: "float-right" }, [
+                    _vm._v(
+                      _vm._s(
+                        _vm._f("moment")(comment.created_at, "from", "now")
+                      )
+                    )
+                  ])
                 ])
               ]),
               _vm._v(" "),
@@ -25503,7 +25510,7 @@ var render = function() {
                     ? _c(
                         "button",
                         {
-                          staticClass: "btn btn-default",
+                          staticClass: "btn btn-secondary",
                           attrs: { type: "button" },
                           on: {
                             click: function($event) {
@@ -25572,7 +25579,12 @@ var render = function() {
         _c("div", { staticClass: "card-body" }, [
           _c("p", [
             _c("i", { staticClass: "fa fa-comments" }),
-            _vm._v("  " + _vm._s(_vm.comment.message))
+            _vm._v("  " + _vm._s(_vm.comment.message) + " "),
+            _c("span", { staticClass: "float-right" }, [
+              _vm._v(
+                _vm._s(_vm._f("moment")(_vm.comment.created_at, "from", "now"))
+              )
+            ])
           ])
         ]),
         _vm._v(" "),
@@ -25597,7 +25609,7 @@ var render = function() {
                       ? _c(
                           "button",
                           {
-                            staticClass: "btn btn-default",
+                            staticClass: "btn btn-secondary",
                             attrs: { type: "button" },
                             on: {
                               click: function($event) {

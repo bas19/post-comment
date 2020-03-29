@@ -6,7 +6,7 @@
                     <div class="user-icon"><i class="fa fa-user"> {{ comment.name }}</i></div>
                 </div>
                 <div class="card-body">
-                    <p><i class="fa fa-comments"></i> {{ comment.message }}</p>
+                    <p><i class="fa fa-comments"></i> {{ comment.message }} <span class="float-right">{{ comment.created_at | moment("from", "now") }}</span></p>
                 </div>
                 <div class="child">
                     <ul>
@@ -18,7 +18,7 @@
                         <form-component  v-on:cancel="cancel(comment)" :post="post_id" :showCancel="true" :selectedComment="selectedComment"/>
                     </div>
                     <div class="text-right">
-                        <button v-if="!comment.add_comment" @click="addComment(comment)" type="button" class="btn btn-default">Add Comment</button>
+                        <button v-if="!comment.add_comment" @click="addComment(comment)" type="button" class="btn btn-secondary">Add Comment</button>
                     </div>
                 </div>
             </div>
@@ -55,7 +55,7 @@
                     .then(data => {
                         let result;
                         data.data.forEach(element => {
-                            result = this.modifyCommentData(element);
+                            result = this.modifyCommentData(element)
                             this.comments.push(result)
                             // check for child comments
                             if (this.hasChild(element)) {

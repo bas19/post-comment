@@ -6,7 +6,7 @@
                     <div class="user-icon"><i class="fa fa-user"> {{ comment.name }}</i></div>
                 </div>
                 <div class="card-body">
-                    <p><i class="fa fa-comments"></i>  {{ comment.message }}</p>
+                    <p><i class="fa fa-comments"></i>  {{ comment.message }} <span class="float-right">{{ comment.created_at | moment("from", "now") }}</span></p>
                 </div>
                 <div class="card-footer" v-if="comment.nested_level < 2">
                     
@@ -17,7 +17,7 @@
                     </div>
 
                     <div v-if="comment.nested_level < 2" class="text-right">
-                        <button v-if="!reply" @click="showForm(comment)" type="button" class="btn btn-default">Add Comment</button>
+                        <button v-if="!reply" @click="showForm(comment)" type="button" class="btn btn-secondary">Add Comment</button>
                     </div>
                     
                     <div class="add-comment" v-if="reply == comment">
