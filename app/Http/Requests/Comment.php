@@ -25,9 +25,9 @@ class Comment extends FormRequest
     {
         return [
             'name' => 'required|max:255',
-            'message' => 'required',
+            'message' => 'required|max:10000',
             'post_id' => 'required|integer',
-            'parent_comment_id' => 'integer',
+            'parent_comment_id' => 'integer|nullable',
             'nested_level' => 'integer'
         ];
     }

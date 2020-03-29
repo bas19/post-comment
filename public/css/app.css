@@ -1,0 +1,63 @@
+.post-title {
+  padding: 50px 15px;
+}
+
+.card {
+  margin-bottom: 15px;
+  border-radius: 0;
+}
+
+.comment-form {
+  width: auto;
+}
+
+.comments .child:last-child {
+  margin-bottom: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.card-footer {
+  background: transparent;
+}
+
+form {
+  padding: 30px;
+  background: #eee;
+}
+
+form input.form-control {
+  width: 40%;
+}
+
+form textarea.form-control {
+  width: 60%;
+}
+
+.card-footer:last-child {
+  border-right: 0;
+}
+
+.user-icon {
+  float: left;
+}
+
+.user-icon i {
+  font-size: 16px;
+}
+
+.no-comment {
+  margin-bottom: 30px;
+}
+
+.card-header,
+.card-body {
+  padding: 15px;
+}
+
+p {
+  margin: 0;
+}
+

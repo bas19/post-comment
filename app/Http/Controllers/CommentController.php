@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Request\Comment;
+use App\Http\Requests\Comment as CommentRequest;
+use App\Comment;
 
 class CommentController extends Controller
 {
@@ -30,12 +31,11 @@ class CommentController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param Comment $request
+     * @param CommentRequest $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Comment $request)
+    public function store(CommentRequest $request)
     {
-        // return Comment::create($request->all());
         return Comment::create([
             'name' => $request->name,
             'message' => $request->message,
@@ -88,5 +88,21 @@ class CommentController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+
+    /**
+     * Show all comments by post id
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function getCommentsByPostId($id)
+    {
+        return Comment::where('post_id', $id)   
+            ->where('nested_level', 0)
+            ->with('grandchildren')
+            ->orderBy('created_at')
+            ->get();
     }
 }
