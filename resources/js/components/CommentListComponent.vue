@@ -17,7 +17,7 @@
                     </div>
 
                     <div v-if="comment.nested_level < 2" class="text-right">
-                        <button v-if="!reply" @click="showForm(comment)" type="button" class="btn btn-secondary">Add Comment</button>
+                        <button v-if="!reply" @click="showForm(comment)" type="button" class="btn btn-secondary btn-sm">Add Comment</button>
                     </div>
                     
                     <div class="add-comment" v-if="reply == comment">
@@ -39,6 +39,9 @@
             }
         },
         methods: {
+            /**
+             * Check the comment object if having a child comments
+             */
             hasChild(comment) {
                 if (comment.grandchildren != null && comment.grandchildren.length > 0 && comment.nested_level < 2) {
                     return true

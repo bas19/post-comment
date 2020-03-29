@@ -28,6 +28,9 @@
             }
         },
         methods: {
+            /**
+             * Send command to parent to cancel and hide the form
+             */
             cancelComment() {
                 this.$emit('cancel');
             },

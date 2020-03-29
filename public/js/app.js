@@ -2050,6 +2050,9 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
+    /**
+     * Check the comment object if having a child comments
+     */
     hasChild: function hasChild(comment) {
       if (comment.grandchildren != null && comment.grandchildren.length > 0 && comment.nested_level < 2) {
         return true;
@@ -2106,6 +2109,9 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
+    /**
+     * Send command to parent to cancel and hide the form
+     */
     cancelComment: function cancelComment() {
       this.$emit('cancel');
     },
@@ -25609,7 +25615,7 @@ var render = function() {
                       ? _c(
                           "button",
                           {
-                            staticClass: "btn btn-secondary",
+                            staticClass: "btn btn-secondary btn-sm",
                             attrs: { type: "button" },
                             on: {
                               click: function($event) {

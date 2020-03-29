@@ -29,6 +29,7 @@
             <div class="row post-title">
                 <h1>Sample Post Title</h1>
             </div>
+            <hr/>
             <div class="row">
                 @yield('content')
             </div>
